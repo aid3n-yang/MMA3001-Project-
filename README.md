@@ -144,6 +144,7 @@ MMA3001-Project-/
 ├── data/
 │   └── raw/
 │
+├── main.py
 ├── pytest.ini
 ├── requirements.txt
 ├── LICENSE
@@ -159,6 +160,16 @@ pip install -r requirements.txt
 ```
 
 The exact package versions used during development are recorded in `requirements.txt`.
+
+## Running the Project
+
+Once the raw environmental dataset has been placed inside `data/raw/`, the complete reconstruction workflow can be run using:
+
+```bash
+python main.py
+```
+
+This loads and cleans the selected temperature sensor, runs the 2,400 reconstruction evaluations, generates the accuracy and robustness summaries, and saves the resulting tables inside `results/tables/`.
 
 ## Running the Tests
 
