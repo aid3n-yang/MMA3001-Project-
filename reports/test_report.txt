@@ -5,11 +5,15 @@ rootdir: /content/MMA3001-Project-
 configfile: pytest.ini
 testpaths: tests
 plugins: platformdirs-4.13.5, anyio-4.15.1, typeguard-4.6.0, langsmith-0.14.11
-collecting ... collected 4 items
+collecting ... collected 8 items
 
-tests/test_reconstruction.py::test_calculate_metrics PASSED              [ 25%]
-tests/test_reconstruction.py::test_constant_temperature_reconstruction PASSED [ 50%]
-tests/test_reconstruction.py::test_linear_temperature_reconstruction PASSED [ 75%]
+tests/test_data_cleaning.py::test_extract_temperature_valid_record PASSED [ 12%]
+tests/test_data_cleaning.py::test_extract_temperature_missing_temperature PASSED [ 25%]
+tests/test_data_cleaning.py::test_extract_temperature_empty_values PASSED [ 37%]
+tests/test_data_cleaning.py::test_extract_temperature_invalid_json PASSED [ 50%]
+tests/test_reconstruction.py::test_calculate_metrics PASSED              [ 62%]
+tests/test_reconstruction.py::test_constant_temperature_reconstruction PASSED [ 75%]
+tests/test_reconstruction.py::test_linear_temperature_reconstruction PASSED [ 87%]
 tests/test_reconstruction.py::test_output_lengths PASSED                 [100%]
 
-============================== 4 passed in 1.08s ===============================
+============================== 8 passed in 1.01s ===============================
