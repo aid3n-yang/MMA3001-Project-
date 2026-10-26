@@ -59,6 +59,10 @@ def main():
     accuracy = summarise_accuracy(results)
     robustness = summarise_robustness(results)
 
+    # Convert the number of missing measurements into an approximate
+    # duration using the sensor's roughly 10-minute sampling interval.
+    accuracy["Approx_Duration_Min"] = accuracy["Gap Size"] * 10
+
     output_directory = Path("results/tables")
     output_directory.mkdir(parents=True, exist_ok=True)
 
