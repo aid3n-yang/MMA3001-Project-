@@ -223,3 +223,4 @@ data/raw/
 .pytest_cache/
 __pycache__/
 *.pyc
+*.zip
